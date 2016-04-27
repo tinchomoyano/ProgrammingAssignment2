@@ -1,6 +1,10 @@
-## These functions, if I understand correctly, reduce the number of calculations that are needed, by putting results in caches. That means that since results are now stored in memory, we don't need to carry out the calculation again (in this case, calculating the inverse of a matrix), which speeds-up the performance of the program. 
+## These functions, if I understand correctly, reduce the number of calculations that are needed, by putting results in caches. 
+# That means that since results are now stored in memory, we don't need to carry out the calculation again (in this case, 
+# calculating the inverse of a matrix), which speeds-up the performance of the program. 
 
-# Both functions bellow are basically a repeat of Prof. Peng's functions that he provided in the assignment. This first function (makeCacheMatrix) creates a vector of functions. None of the functions in this vector calculates the inverse of the matrix, but what it does is save the data in the computer's cache using the 'list' function. 
+# Both functions bellow are basically a repeat of Prof. Peng's functions that he provided in the assignment. 
+# This first function (makeCacheMatrix) creates a vector of functions. None of the functions in this vector calculates 
+# the inverse of the matrix, but what it does is save the data in the computer's cache using the 'list' function. 
 
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
@@ -18,7 +22,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
-## The second function (cacheSolve) does two things: it checks if there  is alreadyan inversed matrix (by checking if $getinverse is empty or not). If it is not empty, it prints its contents. If it is empty, it reads the matrix and calculates its inverse, and saves it in $
+## The second function (cacheSolve) does two things: it checks if there is already an inversed matrix (by 
+# checking if $getinverse is empty or not). If it is not empty, it prints its contents. If it is empty, 
+# it reads the matrix and calculates its inverse, and saves it in $setinverse.
 
 
 cacheSolve <- function(x, ...) {
